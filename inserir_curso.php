@@ -22,8 +22,16 @@
     </header>
     
     <main>
-        <div id="conteudo" class="container">
-            <h1>Bem vindo ao Green Dog cursos</h1>
+        <div id="conteudo" class="container1" id="form-box">
+            <h1>Inserir um novo curso</h1>
+            <form method="post" action="processa_curso.php">
+                <label>Nome curso</label>
+                <input type="text" name="nome_curso" placeholder="Insira o Curso">
+                <label>Carga Horaria</label>
+                <input type="text" name="carga_horaria" placeholder="Insira a Caraga Horaria">
+
+                <input type="submit" value="Inserir curso">
+            </form>
         </div>
     </main>
     

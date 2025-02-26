@@ -12,6 +12,7 @@
         <div class="container">
             <img src="img/logo.png" alt="Logo" title="Logo" id="img">
             <div id="menu">
+                <a href="?pagina=home">Home</a>
                 <a href="?pagina=cursos">Cursos</a>
                 <a href="?pagina=alunos">Alunos</a>
                 <a href="?pagina=matricula">Matriculas</a>
@@ -23,7 +24,19 @@
     
     <main>
         <div id="conteudo" class="container">
-            <h1>Bem vindo ao Green Dog cursos</h1>
+        <table style="border: 1px solid #ccc; width:100%  ">
+                <tr>
+                    <th>Nome Aluno</th>
+                    <th>Data Nascimento</th>
+
+                </tr>
+                <?php 
+                    while($linha = mysqli_fetch_array($consulta_alunos)){
+                        echo '<tr><td>'.$linha['nome_aluno'].'</td>';
+                        echo '<td>'.$linha['data_nascimento'].'</td></tr>';
+                    }
+                ?>
+            </table>
         </div>
     </main>
     
