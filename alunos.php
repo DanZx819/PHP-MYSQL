@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos PHP&MySQL</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="container-pai">
-        
+
         <div class="container">
             <img src="img/logo.png" alt="Logo" title="Logo" id="img">
             <div id="menu">
@@ -19,27 +21,36 @@
             </div>
         </div>
 
-        
+
     </header>
-    
+
     <main>
+
+        <a href="?pagina=inserir_aluno"> Inserir novo Aluno</a>
         <div id="conteudo" class="container">
-        <table style="border: 1px solid #ccc; width:100%  ">
+            <table style="border: 1px solid #ccc; width:100%  ">
                 <tr>
                     <th>Nome Aluno</th>
                     <th>Data Nascimento</th>
 
                 </tr>
-                <?php 
-                    while($linha = mysqli_fetch_array($consulta_alunos)){
-                        echo '<tr><td>'.$linha['nome_aluno'].'</td>';
-                        echo '<td>'.$linha['data_nascimento'].'</td></tr>';
-                    }
+                <?php
+                while ($linha = mysqli_fetch_array($consulta_alunos)) {
+                    echo '<tr><td>' . $linha['nome_aluno'] . '</td>';
+                    echo '<td>' . $linha['data_nascimento'] . '</td></tr>';
+                }
                 ?>
+
+               
             </table>
         </div>
     </main>
-    
-    <footer ><div class="container" id="footer"><p>@2025 Green Dog Cursos - Todos os direitos reservados</p></div></footer>
+
+    <footer>
+        <div class="container" id="footer">
+            <p>@2025 Green Dog Cursos - Todos os direitos reservados</p>
+        </div>
+    </footer>
 </body>
+
 </html>

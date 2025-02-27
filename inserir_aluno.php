@@ -12,7 +12,6 @@
         <div class="container">
             <img src="img/logo.png" alt="Logo" title="Logo" id="img">
             <div id="menu">
-                <a href="?pagina=home">Home</a>
                 <a href="?pagina=cursos">Cursos</a>
                 <a href="?pagina=alunos">Alunos</a>
                 <a href="?pagina=matricula">Matriculas</a>
@@ -23,22 +22,16 @@
     </header>
     
     <main>
-        
-        <div id="conteudo" class="container">
-            <a href="?pagina=inserir_matricula">inserir_matricula</a>
-            <table style="border: 1px solid #ccc; width:100%  ">
-                <tr>
-                    <th>Nome Aluno</th>
-                    <th>Nome curso</th>
+        <div id="conteudo" class="container1" id="form-box">
+            <h1>Inserir um novo Aluno</h1>
+            <form method="post" action="processa_aluno.php">
+                <label>Nome do Aluno</label>
+                <input type="text" name="nome_aluno" placeholder="Insira o Nome">
+                <label>Data de Nascimento</label>
+                <input type="text" name="data_nascimento" placeholder="Insira a Data de Nascimento">
 
-                </tr>
-                <?php 
-                    while($linha = mysqli_fetch_array($consulta_matriculas)){
-                        echo '<tr><td>'.$linha['nome_aluno'].'</td>';
-                        echo '<td>'.$linha['nome_curso'].'</td></tr>';
-                    }
-                ?>
-            </table>
+                <input type="submit" value="Inserir Aluno">
+            </form>
         </div>
     </main>
     

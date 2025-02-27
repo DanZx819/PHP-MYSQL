@@ -9,17 +9,31 @@ if(isset($_GET['pagina'])){
 }else{
     $pagina = 'home';
 }
-if($pagina == 'cursos'){
-    include 'cursos.php';
-}elseif ($pagina == 'alunos'){
-    include 'alunos.php';
-}elseif ($pagina == 'matricula'){
-    include 'matriculas.php';
-}elseif ($pagina == 'inserir_cursos'){
-    include 'inserir_curso.php';
-}else{
-    include 'home.php'; // Agora só é incluído uma vez
+
+switch($pagina){
+    case 'cursos';
+    include 'cursos.php'; break;
+    
+    case 'inserir_curso';
+    include 'inserir_curso.php'; break; 
+
+    case 'alunos';
+    include 'alunos.php'; break;
+    
+    case 'inserir_aluno';
+    include 'inserir_aluno.php'; break;
+
+    
+
+    case 'matricula';
+    include 'matriculas.php'; break;
+
+    case 'inserir_matricula';
+    include 'inserir_matricula.php'; break;
+
+    default: include 'home.php'; break;
 }
+
 
 
 ?>
