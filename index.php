@@ -14,7 +14,7 @@ switch($pagina){
     case 'cursos';
     include 'cursos.php'; break;
     
-    case 'inserir_curso';
+    case 'inserir_cursos';
     include 'inserir_curso.php'; break; 
 
     case 'alunos';
