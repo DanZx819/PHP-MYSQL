@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos PHP&MySQL</title>
+    <link rel="stylesheet" href="estilo/bootstrap.min.css">
     <link rel="stylesheet" href="style.css"> 
+
+     
 </head>
 <body>
     <header class="container-pai">
-        
-        <div class="container">
-            <img src="img/logo.png" alt="Logo" title="Logo" id="img">
+        <img src="img/logo.png" alt="Logo" title="Logo" id="img">
+        <nav class="nav">
+            
             <div id="menu">
+                
                 <a href="?pagina=cursos">Cursos</a>
                 <a href="?pagina=alunos">Alunos</a>
                 <a href="?pagina=matricula">Matriculas</a>
             </div>
-        </div>
+        </nav>
+
+        
+    </header>
 
         
     </header>
